@@ -1,10 +1,10 @@
 # CSAW-HackML-2020
 
-```bash
+```
 ├── data 
     └── clean_validation_data.h5 // this is clean data used to evaluate the BadNet and design the backdoor defense
-    └── clean_test_data.h5 // don\'t use it to design/train anything
-    └── sunglasses_poisoned_data.h5 
+    └── clean_test_data.h5 // don't use it to design/train anything
+    └── sunglasses_poisoned_data.h5
     └── anonymous_1_poisoned_data.h5
     └── trigger_anonymous_1_poisoned_data.pkl // a list produced by `check_anonymous_1_poisoned_data.py`// True for being backdoored
     └── Multi-trigger Multi-target
@@ -26,12 +26,11 @@
 ├── eval_check1283.py 		// check if there are 1283 label // thers is no such
 ├── eval_defense.py   		// to defense and print some statistics
 ├── eval_defense_nodata.py 	// when no data provided
-├── show_photo.py 			// show photos
+├── show_photo.py           // show photos
 ├── fine_prune.py    		// fine-prune and save fine-pruned models // save at fine_pruned_models
 ├── fine_prune_all.sh 		// do fine-prune.py on all bd model
 ├── check_anonymous_1_poisoned_data.py
 └── runall.sh // run for each bad model with suitable .py and data (and trigger label if any)
-
 ```
 
 ## I. Dependencies
@@ -55,6 +54,7 @@
       E.g., `python3 eval.py data/clean_validation_data.h5  models/sunglasses_bd_net.h5`. Clean data classification accuracy on the provided validation dataset for sunglasses_bd_net.h5 is 97.87 %.
 
 ## IV. Evaluating the Submissions The teams should submit a single eval.py
+
 script for each of the four BadNets provided to you. In other words, your
 submission should include four eval.py scripts, each corresponding to one of
 the four BadNets provided. YouTube face dataset has classes in range [0,
@@ -70,7 +70,9 @@ Teams should submit their solutions using GitHub. All your models (and datasets)
 For example: `python3 eval_anonymous_2.py data/test_image.png`. Here, eval_anonymous_2.py is designed for anonynous_2_bd_net.h5 model. Output should be either 1283 (if test_image.png is poisoned) or one class in range [0, 1282] (if test_image.png is not poisoned).
 
 # for submission
+
 ## to evaluate on `anonymous_2_bd_net`
+
 Use `anonymous_2_poisoned_data` as the same format of `anonymous_1_poisoned_data`.
 
 If we put `path_data` for fully poisoned data, in

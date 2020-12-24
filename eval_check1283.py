@@ -10,20 +10,22 @@ import numpy as np
 clean_data_filename = str(sys.argv[1])
 model_filename = str(sys.argv[2])
 
+
 def data_loader(filepath):
     data = h5py.File(filepath, 'r')
     x_data = np.array(data['data'])
     y_data = np.array(data['label'])
-    x_data = x_data.transpose((0,2,3,1))
+    x_data = x_data.transpose((0, 2, 3, 1))
     print(y_data.shape)
     for y in y_data:
-        if y==1283.0 or y==1283:
+        if y == 1283.0 or y == 1283:
             print(filepath)
 
     return x_data, y_data
 
 # def data_preprocess(x_data):
 #     return x_data/255
+
 
 def main():
     x_test, y_test = data_loader(clean_data_filename)
@@ -39,6 +41,7 @@ def main():
     # print("by model:",len(set(clean_label_p)))
     # print("by data:",len(set(y_test)))
     # print('Classification accuracy:', class_accu)
+
 
 if __name__ == '__main__':
     main()
