@@ -2,7 +2,8 @@
 Project Report\
 CSAW-HackML-2020\
 Name: Eugene Wang\
-Net-ID: yjw259
+Net-ID: yjw259\
+https://github.com/y56/CSAW-HackML-2020/blob/master/report.md
 ## Introduction
 In this lab we are given backdoored CNNs (called bad-net/bd_model) with known architecture (refer to `architecture.py`) and we want to "repair" the bad-net. Imagine we are buying service to train a model for us, or using some unknown source of model. Attackers may train the model to perform normally on "clean" data while output misleading result on "poisoned data" with "trigger" it.
 ## Methodology
